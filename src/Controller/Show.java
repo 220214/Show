@@ -7,7 +7,7 @@ public class Show extends Thread{
 	int ing;
 	int proc;
 	double comp;
-	int vali=0;
+	static int vali=0;
 	int igre=100;
 	Semaphore s1;
 	
@@ -34,7 +34,7 @@ public class Show extends Thread{
    		if (igre >= vali) {
    			
    			igre = igre - vali;
-   			System.out.println(" Venda de  "+ proc + "ingressos-- Disponivel  "+ igre + "ingressos");
+   			System.out.println(" Venda de  "+ proc + " ingressos-- Disponivel  "+ igre + " ingressos");
    			vali = vali + proc;
    		}else {
    			System.out.println(" Ingresso insuficiente para venda ");
